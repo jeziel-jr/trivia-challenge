@@ -1,0 +1,14 @@
+.question {
+  color: white;
+  position: absolute;
+  top: 98px;
+  left: 75px;
+}
+
+.score {
+  color: white;
+  position: absolute;
+  top: 148px;
+  left: 75px;
+}
+/*# sourceMappingURL=Score.css.map */

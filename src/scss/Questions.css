@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+* {
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  background: url("../assets/img/background.svg");
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.questions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 50vw;
+  height: 65vh;
+  margin: 80px auto 0;
+}
+
+.questions h2 {
+  font-size: 36px;
+}
+
+.questions h2, .questions h3 {
+  color: white;
+}
+
+.questions h1 {
+  color: #38E9BB;
+  margin-top: 100px;
+}
+
+.buttons {
+  width: 50vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
+}
+
+@media screen and (max-width: 1500px) {
+  .buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 38px;
+  }
+}
+/*# sourceMappingURL=Questions.css.map */
