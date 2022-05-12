@@ -18,17 +18,17 @@ export const Button = ({ Answer }) => {
   const questionCount = useSelector(state => (state.questionCount));
   const dispatch = useDispatch();
   const [btnColor, setBtnColor] = useState('');
-  const [playing, setPlaying] = useState(false);
 
   const [playCorrectAnswer] = useSound(correctAnswerSound, { volume: 0.25 });
   const [playWrongAnswer] = useSound(wrongAnswerSound, { volume: 0.25 });
   const [playCongrats] = useSound(Congrats, { volume: 0.25 });
-  let [playBackgroundMusic, { stop }] = useSound(backgroundMusic, { volume: 0.25 });
+  const [playBackgroundMusic] = useSound(backgroundMusic, { volume: 0.25 });
 
 
   useEffect(() => {
-    playing ? playBackgroundMusic() : stop();
-  }, [playing]);
+    playBackgroundMusic();
+  }, []);
+
 
   const handleChangeScore = (score, question) => {
     dispatch(changeScore(score))
@@ -44,7 +44,7 @@ export const Button = ({ Answer }) => {
   function wrongAnswer() {
     setTimeout(() => {
       handleChangeScore(score, questionCount + 1);
-    }, 1500);
+    }, 800);
     setBtnColor('btn-red');
     setTimeout(() => {
       setBtnColor('');
@@ -56,7 +56,7 @@ export const Button = ({ Answer }) => {
   function rightAnswer() {
     setTimeout(() => {
       handleChangeScore(score + 1, questionCount + 1);
-    }, 1500);
+    }, 800);
     setBtnColor('btn-green');
     setTimeout(() => {
       setBtnColor('');
@@ -77,7 +77,6 @@ export const Button = ({ Answer }) => {
       handleChangeScore(score + 1, questionCount);
       setBtnColor('btn-green');
       setTimeout(() => {
-        stop();
         playCongrats();
         navigate('/finalscore');
       }, 1500);
@@ -88,7 +87,6 @@ export const Button = ({ Answer }) => {
       handleChangeScore(score, questionCount);
       setBtnColor('btn-red');
       setTimeout(() => {
-        stop();
         playCongrats();
         navigate('/finalscore');
       }, 1500);
