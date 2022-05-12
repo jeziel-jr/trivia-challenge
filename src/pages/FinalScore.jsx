@@ -45,7 +45,10 @@ export const FinalScore = () => {
         </ol>
         <p>{scoreMessage}</p>
         <h2>You Scored {score} / 10</h2>
-        <Link to="/questions"><button onClick={resetGame}>Play Again</button></Link>
+        <div className="container-buttons">
+          <Link to="/questions"><button onClick={resetGame}>Play Again</button></Link>
+          <Link to="/" onClick={resetGame}><button>Home</button></Link>
+        </div>
       </div>
     </>
   )
