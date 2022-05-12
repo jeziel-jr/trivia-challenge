@@ -14,7 +14,10 @@ export const FinalScore = () => {
   function setFinalMessage() {
     if (score === 10) {
       setScoreMessage('Parabéns, você acertou todas as questões! 😍')
-    } else if (score <= 4) {
+    } else if (score == 1) {
+      setScoreMessage('Você realmente tentou? Você acertou ' + score + ' questão! 😓')
+    }
+    else if (score <= 4) {
       setScoreMessage('Você realmente tentou? Você acertou ' + score + ' questões! 😓')
     } else if (score <= 7) {
       setScoreMessage('Nada mal, mas você consegue melhorar! Você acertou ' + score + ' questões! 👍')
@@ -31,7 +34,7 @@ export const FinalScore = () => {
 
   useEffect(() => {
     setFinalMessage();
-  }), [];
+  }, []);
 
   return (
     <>
