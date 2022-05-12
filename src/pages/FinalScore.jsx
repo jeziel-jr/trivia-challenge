@@ -26,15 +26,15 @@ export const FinalScore = () => {
     }
   }
 
+  useEffect(() => {
+    setFinalMessage();
+  }, []);
+
   function resetGame() {
     dispatch(changeQuestionCount(1));
     dispatch(changeScore(0));
     dispatch(changeFinalScore([]));
   }
-
-  useEffect(() => {
-    setFinalMessage();
-  }, []);
 
   return (
     <>

@@ -5,12 +5,10 @@ export const Timer = () => {
   const [secondsCounter, setSecondsCounter] = useState(0);
   const [minutesCounter, setMinutesCounter] = useState(0);
 
-  // Contagem de tempo (segundos)
   useEffect(() => {
     setTimeout(() => secondsCounter < 60 && setSecondsCounter(secondsCounter + 1), 1000);
   }, [secondsCounter])
 
-  // Contagem de tempo (minutos)
   useEffect(() => {
     if (secondsCounter === 60) {
       setSecondsCounter(0);

@@ -1,5 +1,5 @@
 import '../scss/Button.scss';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeScore, changeQuestionCount, changeFinalScore } from "../store/actions.js";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +7,6 @@ import useSound from 'use-sound';
 import correctAnswerSound from '../assets/sounds/correctAnswer.mp3';
 import wrongAnswerSound from '../assets/sounds/incorrectAnswer.wav';
 import Congrats from '../assets/sounds/congrats.wav';
-import backgroundMusic from '../assets/sounds/backgroundMusic.mp3';
 
 
 export const Button = ({ Answer }) => {
@@ -18,16 +17,9 @@ export const Button = ({ Answer }) => {
   const questionCount = useSelector(state => (state.questionCount));
   const dispatch = useDispatch();
   const [btnColor, setBtnColor] = useState('');
-
   const [playCorrectAnswer] = useSound(correctAnswerSound, { volume: 0.25 });
   const [playWrongAnswer] = useSound(wrongAnswerSound, { volume: 0.25 });
   const [playCongrats] = useSound(Congrats, { volume: 0.25 });
-  const [playBackgroundMusic] = useSound(backgroundMusic, { volume: 0.25 });
-
-
-  useEffect(() => {
-    playBackgroundMusic();
-  }, []);
 
 
   const handleChangeScore = (score, question) => {
@@ -65,6 +57,27 @@ export const Button = ({ Answer }) => {
     handleChangeFinalScore([...finalScore, [<li style={{ color: '#38E9BB' }}>{correctAnswer}</li>]]);
   }
 
+  function correctAnswerQuestion10() {
+    handleChangeScore(score + 1, questionCount);
+    setBtnColor('btn-green');
+    setTimeout(() => {
+      playCongrats();
+      navigate('/finalscore');
+    }, 1500);
+    playCorrectAnswer();
+    handleChangeFinalScore([...finalScore, [<li style={{ color: '#38E9BB' }}>{correctAnswer}</li>]]);
+  }
+
+  function wrongAnswerQuestion10() {
+    handleChangeScore(score, questionCount);
+    setBtnColor('btn-red');
+    setTimeout(() => {
+      playCongrats();
+      navigate('/finalscore');
+    }, 1500);
+    playWrongAnswer();
+    handleChangeFinalScore([...finalScore, [<li style={{ color: '#FF5252' }}>{correctAnswer}</li>]]);
+  }
 
   function handleClick() {
     if (Answer === correctAnswer && questionCount < 10) {
@@ -74,24 +87,10 @@ export const Button = ({ Answer }) => {
       rightAnswer();
     }
     else if (Answer === correctAnswer && questionCount === 10) {
-      handleChangeScore(score + 1, questionCount);
-      setBtnColor('btn-green');
-      setTimeout(() => {
-        playCongrats();
-        navigate('/finalscore');
-      }, 1500);
-      playCorrectAnswer();
-      handleChangeFinalScore([...finalScore, [<li style={{ color: '#38E9BB' }}>{correctAnswer}</li>]]);
+      correctAnswerQuestion10();
     }
     else {
-      handleChangeScore(score, questionCount);
-      setBtnColor('btn-red');
-      setTimeout(() => {
-        playCongrats();
-        navigate('/finalscore');
-      }, 1500);
-      playWrongAnswer();
-      handleChangeFinalScore([...finalScore, [<li style={{ color: '#FF5252' }}>{correctAnswer}</li>]]);
+      wrongAnswerQuestion10();
     }
   }
 
@@ -101,6 +100,10 @@ export const Button = ({ Answer }) => {
       <button className={btnColor} onClick={handleClick}>{Answer}</button>
     </>
   )
+
+
+
+
 
 
 }
