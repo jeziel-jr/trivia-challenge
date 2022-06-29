@@ -5,3 +5,10 @@ h1.timer{
   right: 75px;
   margin: 0;
 }
+@media screen and (max-width: 950px) {
+  h1.timer {
+    top: 45px;
+    right: 2%;
+    font-size: 20px;
+  }
+}

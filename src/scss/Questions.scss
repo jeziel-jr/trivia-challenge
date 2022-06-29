@@ -51,3 +51,23 @@ body{
     gap: 38px;
   }
 }
+@media screen and (max-width: 950px) {
+  .questions {
+    width: 90vw;
+    margin-top: 100px;
+
+    h2 {
+      font-size: 28px;
+      width: 100%;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 24px;
+    }
+  }
+}

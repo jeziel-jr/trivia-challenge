@@ -55,3 +55,9 @@ button{
       border: 3px solid white;
   }
 }
+@media screen and (max-width: 400px) {
+  button {
+    font-size: 28px;
+    width: 280px;
+  }
+}

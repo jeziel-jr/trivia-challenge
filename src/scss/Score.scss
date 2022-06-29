@@ -10,3 +10,21 @@
   top: 148px;
   left: 75px;
 }
+@media screen and (max-width: 950px) {
+  .question {
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .score {
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .question,
+  .score {
+    font-size: 20px;
+  }
+}

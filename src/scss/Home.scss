@@ -25,3 +25,24 @@
       color: #FFFFFF;
   }
 }
+@media screen and (max-width: 600px) {
+    .trivia-container {
+        img {
+            width: 180px;
+        }
+
+        .trivia-title {
+            font-size: 32px;
+            height: 80px;
+
+            span {
+                font-size: 30px;
+            }
+        }
+
+        .trivia-description {
+            font-size: 24px;
+            width: 80%;
+        }
+    }
+}
