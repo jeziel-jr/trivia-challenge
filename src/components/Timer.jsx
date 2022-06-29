@@ -18,7 +18,7 @@ export const Timer = () => {
 
   return (
     <>
-      <h1 className="timer">{minutesCounter}:{secondsCounter}</h1>
+      <h1 className="timer">{secondsCounter < 10 ? `${minutesCounter}:0${secondsCounter}` : `${minutesCounter}:${secondsCounter}`}</h1>
     </>
   )
 }
