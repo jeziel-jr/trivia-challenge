@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { GameScreen } from './pages/GameScreen'
-import { Home } from './pages/home'
+import { Home } from './pages/Home';
+
 import {
   BrowserRouter,
   Routes,

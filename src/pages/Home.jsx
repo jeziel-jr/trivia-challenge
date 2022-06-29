@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import lightBulb from '../assets/img/light-bulb.svg'
 import '../scss/Home.scss'
 
-export const Home = () => {
+export function Home() {
 
   return (
     <>

@@ -1,6 +1,6 @@
 import { Questions } from "../components/Questions";
 
-export const GameScreen = () => {
+export function GameScreen() {
   return (
     <>
       <Questions />
