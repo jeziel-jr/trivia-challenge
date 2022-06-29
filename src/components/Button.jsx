@@ -9,7 +9,7 @@ import wrongAnswerSound from '../assets/sounds/incorrectAnswer.wav';
 import Congrats from '../assets/sounds/congrats.wav';
 
 
-export const Button = ({ Answer }) => {
+export function Button({ Answer }) {
   let navigate = useNavigate();
   const correctAnswer = useSelector(state => (state.correctAnswer));
   const finalScore = useSelector(state => (state.finalScore));

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import '../scss/Timer.scss';
 
-export const Timer = () => {
+export function Timer() {
   const [secondsCounter, setSecondsCounter] = useState(0);
   const [minutesCounter, setMinutesCounter] = useState(0);
 

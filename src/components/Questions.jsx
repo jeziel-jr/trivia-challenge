@@ -4,7 +4,7 @@ import { Button } from "./Button";
 import { Score } from "./Score";
 import { Timer } from "./Timer";
 
-export const Questions = () => {
+export function Questions() {
   const question = useSelector(state => (state.question));
   const category = useSelector(state => (state.category));
   return (

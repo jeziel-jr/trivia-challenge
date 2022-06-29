@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { GameScreen } from './pages/GameScreen'
 import { Home } from './pages/Home';
 

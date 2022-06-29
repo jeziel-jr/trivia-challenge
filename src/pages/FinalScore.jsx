@@ -5,7 +5,7 @@ import '../scss/FinalScore.scss'
 import { useEffect, useState } from "react";
 
 
-export const FinalScore = () => {
+export function FinalScore() {
   const score = useSelector(state => ([state.score]));
   const finalScore = useSelector(state => (state.finalScore));
   const dispatch = useDispatch();

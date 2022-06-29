@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { changeQuestion, changeCategory, changeCorrectAnswer } from "../store/actions.js"
 
 
-export const GetApiData = () => {
+export function GetApiData() {
   const questionCount = useSelector(state => (state.questionCount));
 
   const dispatch = useDispatch();
