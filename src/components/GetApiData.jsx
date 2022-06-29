@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { changeQuestion, changeCategory, changeCorrectAnswer } from "../store/actions.js"
+import axios from "axios"
 
 
 export function GetApiData() {
