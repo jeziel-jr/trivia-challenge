@@ -3,6 +3,10 @@
 
 Projeto final do curso "Programação do Zero ao Junior" oferecido Pela Pingback.
 
+## 🔗 Acesse:
+
+- [Trivia Challenge](https://trivia-challenge2.netlify.app/)
+
 
 ## 🏠 Página Inicial 
 
