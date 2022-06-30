@@ -26,11 +26,11 @@ Projeto final do curso Programação do Zero ao Junior oferecido Pela Pingback.
 ## 💻 Projeto
 
 Trivia Challenge é um game de perguntas e respostas com 10 perguntas onde você deve escolher entre verdadeiro e falso.
-## ✍🏼Autores
-
-- [@jeziel-junior](https://www.github.com/jeziel-jr)
-
 
 ## 🔖 Layout 
 
 Você pode visualizar o layout do projeto através desse [link](https://www.figma.com/community/file/1124158145014892602). É necessário ter conta no Figma para acessá-lo.
+
+## ✍🏼Autores
+
+- [@jeziel-junior](https://www.github.com/jeziel-jr)
