@@ -1,7 +1,7 @@
 
 # 💡 Trivia Challenge 
 
-Projeto final do curso Programação do Zero ao Junior oferecido Pela Pingback.
+Projeto final do curso "Programação do Zero ao Junior" oferecido Pela Pingback.
 
 
 ## 🏠 Página Inicial 
